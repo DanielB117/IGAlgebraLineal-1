@@ -1,35 +1,45 @@
 package edu.ujcv.progra2.matriz;
 
+import edu.ujcv.progra2.vector.IGVecR2;
+
 public class IGMatR2 {
     // TODO: implementar.
 
-    //en r2
     //double x1,y1;
     //double x2,y2;
 
-//en r3
-    //double x1,y1,z1;
-    //double x2,y2,z2;
-    //double x3,y3,z3;
+
+    // double[][] m;
+
+    //IGVecR2 f1;
+    //IGVecR2 f2;
+
+    //IGVecR2 col1;
+    //IGVecR2 col2;
 
 
-    //en r4
-    //double x1,y1,z1,w1;
-    //double x2,y2,z2,w2;
-    //double x3,y3,z3,w3;
-    //double x4,y4,z4,w4;
 
-    //escoge una de estras tres formas
-
-    //double[][] m;
-    //ejemplo de lo de arriba double [4][4]m; eso es en r4, cambia
+//    public IGMatR2 mul(IGMatR2 b){
+//
+//    }
+//
 
 
-// se agregan mas dependiendo que r se calcula
-    //IGVecR2 fila1;
-    //IGVecR2 fila2;
-// se agregan mas dependiendo que r se calcula
-    //IGVecR2 columna1;
-    //IGVecR2 columna2;
+//    public IGVecR2 colXMat(IGVecR2 col){
+//
+//    }
+
+//    public IGMatR2 suma (IGMatR2 b){
+//
+//    }
+
+//    public IGMatR2 escalarXmat(double escalar){
+//
+//    }
+
+//    public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
+//
+//    }
+
 
 }
