@@ -20,11 +20,15 @@ public class IGMatR2 {
     //double x4,y4,z4,w4;
 
     //escoge una de estras tres formas
-    //double[][] m;
 
+    //double[][] m;
+    //ejemplo de lo de arriba double [4][4]m; eso es en r4, cambia
+
+
+// se agregan mas dependiendo que r se calcula
     //IGVecR2 fila1;
     //IGVecR2 fila2;
-
+// se agregan mas dependiendo que r se calcula
     //IGVecR2 columna1;
     //IGVecR2 columna2;
 
