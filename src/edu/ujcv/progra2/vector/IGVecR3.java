@@ -6,14 +6,40 @@ public class IGVecR3 {
     private double y;
     private double z;
 
+    public IGVecR3(){
+        this.x=0;
+        this.y=0;
+        this.z=0;
+    }
+
+    public IGVecR3(double x,double y, double z){
+        this.x=x;
+        this.y=y;
+        this.z=z;
+    }
+    public IGVecR3 (IGVecR3 b){
+        this.x=b.x;
+        this.y=b.y;
+        this.z=b.z;
+    }
+
+
     public IGVecR3 suma(IGVecR3 b){
+        IGVecR3  wea = new IGVecR3();
+        wea.x = x + b.x;
+        wea.y= y + b.y;
+        wea.z= z + b.z;
+        return wea;
         //TODO: implementar
-        return new IGVecR3();
     }
 
     public IGVecR3 resta(IGVecR3 b){
+        IGVecR3  wea = new IGVecR3();
+        wea.x = x - b.x;
+        wea.y= y - b.y;
+        wea.z= z - b.z;
+        return wea;
         //TODO: implementar
-        return new IGVecR3();
     }
 
     //producto.
