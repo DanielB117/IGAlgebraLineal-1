@@ -71,23 +71,6 @@ public class IGVecR2 {
         return Math.sqrt(productoPunto(this));
     }
 }
-// getter and setter
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-
-    public double getX() {
-        return x;
-    }
-
-    public void setx(double x) {
-        this.x = x;
-    }
 
 
 
