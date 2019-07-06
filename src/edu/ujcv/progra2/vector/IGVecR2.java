@@ -1,7 +1,9 @@
 package edu.ujcv.progra2.vector;
 public class IGVecR2 {
-private double x;
-private double y;
+
+
+    private double x;
+    private double y;
 //    privado los datos
 //     un escalar que represente 'x' y 'y' los componentes del vector
     //contencion
@@ -43,3 +45,20 @@ private double y;
         return Math.sqrt(productoPunto(this));
     }
 }
+// getter and setter
+    public double getY() {
+        return y;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+
+    public double getX() {
+        return x;
+    }
+
+    public void setx(double x) {
+        this.x = x;
+    }
