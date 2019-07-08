@@ -1,7 +1,6 @@
 package edu.ujcv.progra2.vector;
 public class IGVecR2 {
 
-
     private double x;
     private double y;
 
@@ -14,67 +13,57 @@ public class IGVecR2 {
         this.x=x;
         this.y=y;
     }
+
     public IGVecR2 (IGVecR2 b){
         this.x=b.x;
         this.y=b.y;
     }
 
     public IGVecR2 suma(IGVecR2 b){
-      IGVecR2  wea = new IGVecR2();
-      wea.x = x + b.x;
-        wea.y= y+ b.y;
-        return wea;
+      IGVecR2  Resul = new IGVecR2();
+        Resul.x = x + b.x;
+        Resul.y= y+ b.y;
+        return Resul;
         //TODO: implementar
     }
-
-
-
-
 
     public IGVecR2 resta(IGVecR2 b){
-
-        IGVecR2  wea = new IGVecR2();
-        wea.x = x - b.x;
-        wea.y= y - b.y;
-        return wea;
+        IGVecR2 Resul  = new IGVecR2();
+        Resul.x = x - b.x;
+        Resul.y= y - b.y;
+        return Resul;
         //TODO: implementar
     }
-
-
-
 
     //producto.
     public  IGVecR2 escalarPorVector(double alpha){
-        //TODO: implementar
-        return new IGVecR2();
+        IGVecR2 Resul = new IGVecR2();
+
+      return Resul;
+      //TODO: implementar
     }
 
-
-
-
     public double productoPunto(IGVecR2 b){
-        //TODO: implementar
         return 0.0;
+        //TODO: implementar
     }
     // no esta definido en R2.!!!!!
     //public IGVecR2 productoCruz(IGVecR2 b){
     //}
     public double determinante(){
-        //TODO: implementar
         return 0.0;
+        // TODO: implementar
     }
+
     public double angulo(IGVecR2 b){
-        //TODO: implementar
         return 0.0;
+        //TODO: implementar
     }
+
     public double magnitud(){
         return Math.sqrt(productoPunto(this));
     }
 }
-
-
-
-
 
 //    privado los datos
 //     un escalar que represente 'x' y 'y' los componentes del vector

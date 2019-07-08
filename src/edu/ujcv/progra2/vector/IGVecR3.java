@@ -25,20 +25,20 @@ public class IGVecR3 {
 
 
     public IGVecR3 suma(IGVecR3 b){
-        IGVecR3  wea = new IGVecR3();
-        wea.x = x + b.x;
-        wea.y= y + b.y;
-        wea.z= z + b.z;
-        return wea;
+        IGVecR3  Resul = new IGVecR3();
+        Resul.x = x + b.x;
+        Resul.y= y + b.y;
+        Resul.z= z + b.z;
+        return Resul;
         //TODO: implementar
     }
 
     public IGVecR3 resta(IGVecR3 b){
-        IGVecR3  wea = new IGVecR3();
-        wea.x = x - b.x;
-        wea.y= y - b.y;
-        wea.z= z - b.z;
-        return wea;
+        IGVecR3  Resul = new IGVecR3();
+        Resul.x = x - b.x;
+        Resul.y= y - b.y;
+        Resul.z= z - b.z;
+        return Resul;
         //TODO: implementar
     }
 

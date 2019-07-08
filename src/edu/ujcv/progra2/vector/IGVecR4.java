@@ -36,22 +36,22 @@ public class IGVecR4 {
 
     
     public IGVecR4 suma(IGVecR4 b){
-        IGVecR4  wea = new IGVecR4();
-        wea.x = x + b.x;
-        wea.y= y + b.y;
-        wea.z= z + b.z;
-        wea.w= w + b.w;
-        return wea;
+        IGVecR4  Resul = new IGVecR4();
+        Resul.x = x + b.x;
+        Resul.y= y + b.y;
+        Resul.z= z + b.z;
+        Resul.w= w + b.w;
+        return Resul;
         //TODO: implementar
     }
 
     public IGVecR4 resta(IGVecR4 b){
-        IGVecR4  wea = new IGVecR4();
-        wea.x = x - b.x;
-        wea.y= y - b.y;
-        wea.z= z - b.z;
-        wea.w= w -b.w;
-        return wea;
+        IGVecR4  Resul = new IGVecR4();
+        Resul.x = x - b.x;
+        Resul.y= y - b.y;
+        Resul.z= z - b.z;
+        Resul.w= w -b.w;
+        return Resul;
         //TODO: implementar
     }
 
