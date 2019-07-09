@@ -13,7 +13,7 @@ public class LectorDeTecladoValidado {
         }
         return instance;
     }
-    private LectorDeTecladoValidado(){
+    public LectorDeTecladoValidado(){
         sc = new Scanner(System.in);
     }
     public double getDouble(String mensaje, String reintento){

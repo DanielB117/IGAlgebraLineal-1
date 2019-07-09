@@ -1,12 +1,13 @@
 package edu.ujcv.progra2.vector;
 
-import edu.ujcv.progra2.matriz.IGMatR4;
+import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
 
 public class IGVecR4 {
     private double x;
     private double y;
     private double z;
     private double w;
+    private LectorDeTecladoValidado lt = new LectorDeTecladoValidado();
 
     public IGVecR4() {
         this.x = 0;
@@ -19,7 +20,7 @@ public class IGVecR4 {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.w = 0;
+        this.w = w;
     }
 
     public IGVecR4(IGVecR4 b) {
@@ -51,8 +52,12 @@ public class IGVecR4 {
 
     //producto.
     public IGVecR4 escalarPorVector(double alpha) {
-        //TODO: implementar
-        return new IGVecR4();
+        IGVecR4 Resul = new IGVecR4();
+        Resul.x = alpha * x;
+        Resul.y= alpha *y;
+        Resul.z= alpha *z;
+        Resul.w= alpha *w;
+        return Resul;
     }
 
     public double productoPunto(IGVecR4 b) {
@@ -62,18 +67,8 @@ public class IGVecR4 {
         Resul.z = z * b.z;
         Resul.w = w * b.w;
         double a = Resul.x + Resul.y + Resul.z + Resul.w;
-        //TODO: implementar
         return a;
     }
-
-    // no esta definido en R4.!!!!!
-    //public IGVecR4 productoCruz(IGVecR4 b){
-    //}
-    public double determinante() {
-        //TODO: implementar
-        return 0.0;
-    }
-
     public double angulo(IGVecR4 b) {
         IGVecR4 Resul = new IGVecR4();
         Resul.x = x * b.x;
@@ -84,8 +79,6 @@ public class IGVecR4 {
         double c = Math.sqrt(((Math.pow(b.x, 2) + Math.pow(b.y, 2) + Math.pow(b.z, 2) + Math.pow(b.w, 2))));
         double f = Math.sqrt(((Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2) + Math.pow(w, 2))));
         double d = Math.acos((a / (c * f)));
-
-        //TODO: implementar
         return d;
     }
 

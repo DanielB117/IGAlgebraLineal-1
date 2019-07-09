@@ -1,8 +1,12 @@
 package edu.ujcv.progra2.vector;
+
+import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
+
 public class IGVecR3 {
     private double x;
     private double y;
     private double z;
+    private LectorDeTecladoValidado lt = new LectorDeTecladoValidado();
 
     public IGVecR3() {
         this.x = 0;
@@ -42,8 +46,13 @@ public class IGVecR3 {
 
     //producto.
     public IGVecR3 escalarPorVector(double alpha) {
-        //TODO: implementar
-        return new IGVecR3();
+        IGVecR3 Resul = new IGVecR3();
+        Resul.x = alpha * x;
+        Resul.y= alpha *y;
+        Resul.z= alpha *z;
+
+        return Resul;
+
     }
 
     public double productoPunto(IGVecR3 b) {
@@ -63,15 +72,8 @@ public class IGVecR3 {
         Resul.x = (b.z * y) - (b.y * z);
         Resul.y = (b.x * z) - (b.z * x);
         Resul.z = (b.y * x) - (b.x * y);
-
         return Resul;
     }
-
-    public double determinante() {
-        //TODO: implementar
-        return 0.0;
-    }
-
     public double angulo(IGVecR3 b) {
         IGVecR3 Resul = new IGVecR3();
         Resul.x = x * b.x;
@@ -115,7 +117,9 @@ public class IGVecR3 {
         return z;
     }
 
-    public void setz(double z) {
+    public void setZ(double z) {
         this.z = z;
     }
+
+
 }
