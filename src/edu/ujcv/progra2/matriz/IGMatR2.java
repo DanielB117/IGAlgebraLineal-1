@@ -60,10 +60,12 @@ return Resul;
      Resul.colY.setY(this.colY.getY()* escalar);
      return Resul;
     }
-        public IGVecR2 rotacion (double angulo, IGVecR2 fila){
-            IGVecR2 Resul = new IGVecR2();
-            Resul.setx(fila.productoPunto(this.getFilaX()));
-            Resul.setY(fila.productoPunto(this.getFilaY()));
+        public IGMatR2 rotacion (double angulo, IGMatR2 fila){
+            IGMatR2 Resul = new IGMatR2();
+            Resul.colX.setx(this.colX.getX()*Math.acos(angulo));
+            Resul.colX.setY(this.colX.getY()*(-Math.sin(angulo)));
+            Resul.colY.setx(this.colY.getX()*Math.cos(angulo));
+            Resul.colY.setY(this.colY.getY()*Math.sin(angulo));
             return  Resul;
     }
 
