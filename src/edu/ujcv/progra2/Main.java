@@ -498,14 +498,14 @@ int Rep;
 
                                         }
                                         if (operaMat == 6) {
-                                                IGVecR2 A = new IGVecR2();
-                                                IGVecR2 B= new IGVecR2();
-                                                System.out.println("ingrese el angulo");
-                                                double angulo = sc.nextDouble();
-                                                System.out.println("Ingrese el vector X y Y");
-                                                A.setx(sc.nextDouble());
-                                                A.setY(sc.nextDouble());
-                                                IGMatR2 c = new IGMatR2();
+//                                                IGVecR2 A = new IGVecR2();
+//                                                IGVecR2 B= new IGVecR2();
+//                                                System.out.println("ingrese el angulo");
+//                                                double angulo = sc.nextDouble();
+//                                                System.out.println("Ingrese el vector X y Y");
+//                                                A.setx(sc.nextDouble());
+//                                                A.setY(sc.nextDouble());
+//                                                IGMatR2 c = new IGMatR2();
                                         }
                                 }
 
@@ -518,10 +518,65 @@ int Rep;
 
                                         int operaMat = sc.nextInt();
                                         if (operaMat == 1) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                IGVecR4 C = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                C.setx(sc.nextDouble());
+                                                C.setY(sc.nextDouble());
+                                                C.setZ(sc.nextDouble());
+                                                C.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.suma(B.suma(C));
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 2) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                IGVecR4 C = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                C.setx(sc.nextDouble());
+                                                C.setY(sc.nextDouble());
+                                                C.setZ(sc.nextDouble());
+                                                C.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.resta(B.resta(C));
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 3) {
+                                             
                                         }
                                         if (operaMat == 4) {
                                         }
@@ -538,8 +593,78 @@ int Rep;
                                         int operaMat = sc.nextInt();
 
                                         if (operaMat == 1) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                IGVecR4 C = new IGVecR4();
+                                                IGVecR4 D = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                C.setx(sc.nextDouble());
+                                                C.setY(sc.nextDouble());
+                                                C.setZ(sc.nextDouble());
+                                                C.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                D.setx(sc.nextDouble());
+                                                D.setY(sc.nextDouble());
+                                                D.setZ(sc.nextDouble());
+                                                D.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.suma(B.suma(C.suma(D)));
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 2) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                IGVecR4 C = new IGVecR4();
+                                                IGVecR4 D = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                C.setx(sc.nextDouble());
+                                                C.setY(sc.nextDouble());
+                                                C.setZ(sc.nextDouble());
+                                                C.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                D.setx(sc.nextDouble());
+                                                D.setY(sc.nextDouble());
+                                                D.setZ(sc.nextDouble());
+                                                D.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.resta(B.resta(C.resta(D)));
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 3) {
                                         }
