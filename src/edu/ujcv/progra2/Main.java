@@ -1,16 +1,21 @@
 package edu.ujcv.progra2;
+import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
 import edu.ujcv.progra2.vector.IGVecR2;
 import edu.ujcv.progra2.vector.IGVecR3;
 import edu.ujcv.progra2.vector.IGVecR4;
 
 import java.util.Scanner;
 public class Main {
+
         public static void main(String[] args) {
                 // write your code here
+
                 Scanner sc = new Scanner(System.in);
                 System.out.println("que desea calcular");
                 System.out.println("Presione 1 para calcular vectores");
                 System.out.println("Presione 2 para calcular matrices");
+                System.out.println("presione 3 para salir del programa");
+
                 int Tipoopera = sc.nextInt();
                 if (Tipoopera == 1) {
                         System.out.println("presione 1 para calcular Vector en R2");
@@ -26,6 +31,7 @@ public class Main {
                                 System.out.println("presione 6 para calcular angulo en R2");
                                 int operaVec = sc.nextInt();
                                 if (operaVec == 1) {
+
                                         IGVecR2 a = new IGVecR2();
                                         System.out.println("ingrese los componentes del primer vector");
                                         a.setx(sc.nextDouble());
@@ -39,6 +45,7 @@ public class Main {
                                         System.out.println("Su resultado es");
                                         System.out.print(x.getX());
                                         System.out.print("," + y.getY());
+
                                 }
                                 if (operaVec == 2) {
                                         IGVecR2 a = new IGVecR2();
@@ -57,19 +64,14 @@ public class Main {
 
                                 }
                                 if (operaVec == 3) {
-//                                        IGVecR2 a = new IGVecR2();
-//                                        System.out.println("ingrese los componentes del primer vector");
-//                                        a.setx(sc.nextDouble());
-//                                        a.setY(sc.nextDouble());
-//                                        IGVecR2 alpha = new IGVecR2();
-//                                        System.out.println("ingrese las componentes del segundo vector");
-//                                        alpha.setx(sc.nextDouble());
-//                                        alpha.setY(sc.nextDouble());
-//                                        double x = a.escalarPorVector( double alpha);
-//                                        double y = a.escalarPorVector( double alpha);
-//                                        System.out.println("Su resultado es");
-//                                        System.out.print(x);
-//                                        System.out.print("," + y);
+                                        IGVecR2 a = new IGVecR2();
+                                        System.out.println("Ingrese X1 y Y1");
+                                        a.setx(sc.nextDouble());
+                                        a.setY(sc.nextDouble());
+                                        System.out.println("ingrese Alpha");
+                                        double alpha = sc.nextDouble();
+                                        IGVecR2 Resul = a.escalarPorVector(alpha);
+                                        System.out.println("El resultado es: (" + Resul.getX() + ", " + Resul.getY() + ")\n");
                                 }
                                 if (operaVec == 4) {
                                         IGVecR2 a = new IGVecR2();
@@ -119,12 +121,7 @@ public class Main {
                                 }
 
                         }
-                        //IGVecR2 A = new IGVecR2()
-                        //pedir componente x y componente y
-                        //declarar vector b
-                        //pedir componentes del vector b
-                        //resultado = a.suma(b);
-                        //sout{resultado}
+
 
                         if (TipoVec == 2) {
                                 System.out.println("presione 1 para calcular suma en R3");
@@ -176,23 +173,15 @@ public class Main {
                                         System.out.print("," + z.getZ());
                                 }
                                 if (operaVec == 3) {
-//                                        IGVecR3 a = new IGVecR3();
-//                                        System.out.println("ingrese los componentes del primer vector");
-//                                        a.setx(sc.nextDouble());
-//                                        a.setY(sc.nextDouble());
-//                                        a.setZ(sc.nextDouble());
-//                                        IGVecR3 alpha = new IGVecR3();
-//                                        System.out.println("ingrese las componentes del segundo vector");
-//                                        alpha.setx(sc.nextDouble());
-//                                        alpha.setY(sc.nextDouble());
-//                                        alpha.setZ(sc.nextDouble());
-//                                        double x = a.escalarPorVector( double alpha);
-//                                        double y = a.escalarPorVector( double alpha);
-//                                        double z = a.escalarPorVector( double alpha);
-//                                        System.out.println("Su resultado es");
-//                                        System.out.print(x);
-//                                        System.out.print("," + y);
-//                                        System.out.print("," + z);
+                                        IGVecR3 a = new IGVecR3();
+                                        System.out.println("Ingrese X1 y Y1 y Z1");
+                                        a.setx(sc.nextDouble());
+                                        a.setY(sc.nextDouble());
+                                        a.setZ(sc.nextDouble());
+                                        System.out.println("ingrese Alpha");
+                                        double alpha = sc.nextDouble();
+                                        IGVecR3 Resul = a.escalarPorVector(alpha);
+                                        System.out.println("El resultado es: (" + Resul.getX() + ", " + Resul.getY() + ", " + Resul.getZ() + ")\n");
 
                                 }
                                 if (operaVec == 4) {
@@ -274,12 +263,7 @@ public class Main {
 
                                 }
 
-                                //IGVecR3 A = new IGVecR3()
-                                //pedir componente x y componente y y componente w
-                                //declarar vector b
-                                //pedir componentes del vector b
-                                //resultado = a.suma(b);
-                                //sout{resultado}
+
                         }
 
                         if (TipoVec == 3) {
@@ -338,27 +322,16 @@ public class Main {
                                         System.out.print("," + w.getw());
                                 }
                                 if (operaVec == 3) {
-//                                        IGVecR4 a = new IGVecR4();
-//                                        System.out.println("ingrese los componentes del primer vector");
-//                                        a.setx(sc.nextDouble());
-//                                        a.setY(sc.nextDouble());
-//                                        a.setZ(sc.nextDouble());
-//                                        IGVecR4 alpha = new IGVecR4();
-//                                        System.out.println("ingrese las componentes del segundo vector");
-//                                        alpha.setx(sc.nextDouble());
-//                                        alpha.setY(sc.nextDouble());
-//                                        alpha.setZ(sc.nextDouble());
-//                                        alpha.setw(sc.nextDouble());
-//                                        double x = a.escalarPorVector( double alpha);
-//                                        double y = a.escalarPorVector( double alpha);
-//                                        double z = a.escalarPorVector( double alpha);
-//                                        double w = a.escalarPorVector( double alpha);
-//                                        System.out.println("Su resultado es");
-//                                        System.out.print(x);
-//                                        System.out.print("," + y);
-//                                        System.out.print("," + z);
-//                                        System.out.print("," + w);
-
+                                        IGVecR4 a = new IGVecR4();
+                                        System.out.println("Ingrese X1 y Y1 y Z1 y W1");
+                                        a.setx(sc.nextDouble());
+                                        a.setY(sc.nextDouble());
+                                        a.setZ(sc.nextDouble());
+                                        a.setw(sc.nextDouble());
+                                        System.out.println("ingrese Alpha");
+                                        double alpha = sc.nextDouble();
+                                        IGVecR4 Resul = a.escalarPorVector(alpha);
+                                        System.out.println("El resultado es: (" + Resul.getX() + ", " + Resul.getY() + ", " + Resul.getZ() + ", " + Resul.getw() + ")\n");
                                 }
                                 if (operaVec == 4) {
                                         IGVecR4 a = new IGVecR4();
@@ -429,17 +402,83 @@ public class Main {
                                         System.out.print("," + z);
                                         System.out.print("," + w);
                                 }
-                                //IGVecR4 A = new IGVecR4()
-                                //pedir componente x y componente y y componente w y componente z
-                                //declarar vector b
-                                //pedir componentes del vector b
-                                //resultado = a.suma(b);
-                                //sout{resultado}
                         }
                 }
                 if (Tipoopera == 2) {
+                        System.out.println("presione 1 para calcular Matrices en R2");
+                        System.out.println("presione 2 para calcular Matrices en R3 ");
+                        System.out.println("presione 3 para calcular Matrices en R4");
+                        int TipoMat = sc.nextInt();
+                        if (TipoMat == 1) {
+                                System.out.println("presione 1 para calcular  en R2");
+                                System.out.println("presione 2 para calcular  en R2");
+                                System.out.println("presione 3 para calcular  en R2");
+                                System.out.println("presione 4 para calcular  en R2");
+                                System.out.println("presione 5 para calcular  en R2");
+                                System.out.println("presione 6 para calcular  en R2");
+                                int operaMat = sc.nextInt();
+                                if(operaMat == 1) {
+                                }
+                                if(operaMat == 2) {
+                                }
+                                if(operaMat == 3) {
+                                }
+                                if(operaMat == 4) {
+                                }
+                                if(operaMat == 5) {
+                                }
+                                if(operaMat == 6) {
+                                }
+                                }
+
+                        if (TipoMat == 2) {
+                                System.out.println("presione 1 para calcular  en R3");
+                                System.out.println("presione 2 para calcular  en R3");
+                                System.out.println("presione 3 para calcular  en R3");
+                                System.out.println("presione 4 para calcular  en R3");
+                                System.out.println("presione 5 para calcular  en R3");
+                                System.out.println("presione 6 para calcular  en R3");
+                                int operaMat = sc.nextInt();
+                                if(operaMat == 1) {
+                                }
+                                if(operaMat == 2) {
+                                }
+                                if(operaMat == 3) {
+                                }
+                                if(operaMat == 4) {
+                                }
+                                if(operaMat == 5) {
+                                }
+                                if(operaMat == 6) {
+                                }
+                        }
+                        if (TipoMat == 3) {
+                                System.out.println("presione 1 para calcular  en R4");
+                                System.out.println("presione 2 para calcular  en R4");
+                                System.out.println("presione 3 para calcular  en R4");
+                                System.out.println("presione 4 para calcular en R4");
+                                System.out.println("presione 5 para calcular  en R4");
+                                System.out.println("presione 6 para calcular  en R4");
+                                int operaMat = sc.nextInt();
+
+                                if(operaMat == 1) {
+                                }
+                                if(operaMat == 2) {
+                                }
+                                if(operaMat == 3) {
+                                }
+                                if(operaMat == 4) {
+                                }
+                                if(operaMat == 5) {
+                                }
+                                if(operaMat == 6) {
+                                }
+                        }
+
+                        }
 
                 }
         }
-}
+
+
 

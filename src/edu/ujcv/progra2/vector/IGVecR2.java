@@ -32,7 +32,7 @@ public class IGVecR2 {
         return Resul;
     }
 
-    //producto.
+
     public  IGVecR2 escalarPorVector(double alpha){
         IGVecR2 Resul = new IGVecR2();
         Resul.x = alpha * x;
