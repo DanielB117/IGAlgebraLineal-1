@@ -1,4 +1,5 @@
 package edu.ujcv.progra2;
+import edu.ujcv.progra2.matriz.IGMatR2;
 import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
 import edu.ujcv.progra2.vector.IGVecR2;
 import edu.ujcv.progra2.vector.IGVecR3;
@@ -413,34 +414,108 @@ int Rep;
                                 System.out.println("presione 3 para calcular Matrices en R4");
                                 int TipoMat = sc.nextInt();
                                 if (TipoMat == 1) {
-                                        System.out.println("presione 1 para calcular  en R2");
-                                        System.out.println("presione 2 para calcular  en R2");
-                                        System.out.println("presione 3 para calcular  en R2");
-                                        System.out.println("presione 4 para calcular  en R2");
-                                        System.out.println("presione 5 para calcular  en R2");
-                                        System.out.println("presione 6 para calcular  en R2");
+                                        System.out.println("presione 1 para calcular suma en R2");
+                                        System.out.println("presione 2 para calcular  resta en R2");
+                                        System.out.println("presione 3 para calcular  multiplicacion en R2");
+                                        System.out.println("presione 4 para calcular  colXMat en R2");
+                                        System.out.println("presione 5 para calcular escalarXmat en R2");
+                                        System.out.println("presione 6 para calcular rotacion en R2");
                                         int operaMat = sc.nextInt();
                                         if (operaMat == 1) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                IGVecR4 a = new IGVecR4();
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.suma(B);
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 2) {
+                                                IGVecR4 A = new IGVecR4();
+                                                IGVecR4 B = new IGVecR4();
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                IGVecR4 a = new IGVecR4();
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                A.setZ(sc.nextDouble());
+                                                A.setw(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                B.setx(sc.nextDouble());
+                                                B.setY(sc.nextDouble());
+                                                B.setZ(sc.nextDouble());
+                                                B.setw(sc.nextDouble());
+                                                IGVecR4 resul = A.resta(B);
+                                                System.out.println("|"+resul.getX()+" "+resul.getY()+"|");
+                                                System.out.println("|"+resul.getZ()+" "+resul.getw()+"|");
                                         }
                                         if (operaMat == 3) {
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                IGVecR2 a = new IGVecR2();
+                                                a.setx(sc.nextDouble());
+                                                a.setY(sc.nextDouble());
+                                                IGVecR2 b = new IGVecR2();
+                                                b.setx(sc.nextDouble());
+                                                b.setY(sc.nextDouble());
+                                                System.out.println("|X Y|");
+                                                System.out.println("|Z W|");
+                                                System.out.println("Ingrese X,Y,Z,W");
+                                                IGVecR2  c = new IGVecR2();
+                                                c.setx(sc.nextDouble());
+                                                IGVecR2 d = new IGVecR2();
+                                                d.setx(sc.nextDouble());
+                                                c.setY(sc.nextDouble());
+                                                d.setY(sc.nextDouble());
+                                                double t= a.productoPunto(c);
+                                                double o= a.productoPunto(d);
+                                                double e=b.productoPunto(c);
+                                                double v= b.productoPunto(d);
+                                                System.out.println("|"+t+" "+o+"|");
+                                                System.out.println("|"+e+" "+v+"|");
                                         }
                                         if (operaMat == 4) {
+
                                         }
                                         if (operaMat == 5) {
+
                                         }
                                         if (operaMat == 6) {
+                                                IGVecR2 A = new IGVecR2();
+                                                IGVecR2 B= new IGVecR2();
+                                                System.out.println("ingrese el angulo");
+                                                double angulo = sc.nextDouble();
+                                                System.out.println("Ingrese el vector X y Y");
+                                                A.setx(sc.nextDouble());
+                                                A.setY(sc.nextDouble());
+                                                IGMatR2 c = new IGMatR2();
                                         }
                                 }
 
                                 if (TipoMat == 2) {
-                                        System.out.println("presione 1 para calcular  en R3");
-                                        System.out.println("presione 2 para calcular  en R3");
-                                        System.out.println("presione 3 para calcular  en R3");
-                                        System.out.println("presione 4 para calcular  en R3");
-                                        System.out.println("presione 5 para calcular  en R3");
-                                        System.out.println("presione 6 para calcular  en R3");
+                                        System.out.println("presione 1 para calcular suma en R3");
+                                        System.out.println("presione 2 para calcular  resta en R3");
+                                        System.out.println("presione 3 para calcular  multipicacion en R3");
+                                        System.out.println("presione 4 para calcular colXmax en R3");
+                                        System.out.println("presione 5 para calcular Escalar X Mat en R3");
+
                                         int operaMat = sc.nextInt();
                                         if (operaMat == 1) {
                                         }
@@ -452,16 +527,14 @@ int Rep;
                                         }
                                         if (operaMat == 5) {
                                         }
-                                        if (operaMat == 6) {
-                                        }
                                 }
                                 if (TipoMat == 3) {
-                                        System.out.println("presione 1 para calcular  en R4");
-                                        System.out.println("presione 2 para calcular  en R4");
-                                        System.out.println("presione 3 para calcular  en R4");
-                                        System.out.println("presione 4 para calcular en R4");
-                                        System.out.println("presione 5 para calcular  en R4");
-                                        System.out.println("presione 6 para calcular  en R4");
+                                        System.out.println("presione 1 para calcular suma  en R4");
+                                        System.out.println("presione 2 para calcular resta en R4");
+                                        System.out.println("presione 3 para calcular multiplicacion en R4");
+                                        System.out.println("presione 4 para calcular colXmax en R4");
+                                        System.out.println("presione 5 para calcular EscalarXMat en R4");
+
                                         int operaMat = sc.nextInt();
 
                                         if (operaMat == 1) {
@@ -473,8 +546,6 @@ int Rep;
                                         if (operaMat == 4) {
                                         }
                                         if (operaMat == 5) {
-                                        }
-                                        if (operaMat == 6) {
                                         }
                                 }
 
