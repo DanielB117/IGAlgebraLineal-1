@@ -1,177 +1,91 @@
-//package edu.ujcv.progra2.matriz;
-//import edu.ujcv.progra2.utility.LectorDeTecladoValidado;
-//
-//public class IGMatR2 {
-//    private int a;
-//    private int b;
-//    private int c;
-//    private LectorDeTecladoValidado lt = new LectorDeTecladoValidado();
+package edu.ujcv.progra2.matriz;
+import edu.ujcv.progra2.vector.IGVecR2;
 
-//    IGVecR2 f1;
-//    IGVecR2 f2;
-//
-//  public IGMatR2 mul(IGMatR2 b){
-////
-//    }
-//
-////
-//    public IGVecR2 colXMat(IGVecR2 col){
-////
-//    }
-//    public IGMatR2 suma (IGMatR2 b){
-////
-//    }
-//   public IGMatR2 escalarXmat(double escalar){
-////
-//    }
-//   public static IGVecR2 rotacion (double angulo, IGVecR2 vector){
-//           int x = lt.leerEntero("ingrese el valor x del vector","intente de nuevo");
-//           int y = lt.leerEntero("ingrese el valor y del vector","intente de nuevo");
-//
-//           double grados = lt.leerFlotante("Ingrese el angulo","intente de nuevo");
-//
-//           double a1 = Math.cos(grados);
-//           double a2 = Math.sin(grados);
-//           double a3 = Math.sin(grados);
-//           double a4 = Math.cos(grados);
-//
-//           System.out.println("la matriz rotacion es:");
-//           System.out.println("|"+a1+" "+a2+"|");
-//           System.out.println("|"+a3+" "+a4+"|");
-//
-//           System.out.println("La matriz del vector es: ");
-//           System.out.println("|"+x+" "+y+"|");
-//
-//           double b1 = a1 * x + (-a2 * y);
-//           double b2 = a3 * x + a4 * y;
-//
-//           System.out.println("El total es: ");
-//           System.out.println("|"+b1+" "+b2+"|");
-//       }
-//    }
-//
-//
-//
-//    public void suma(){
-//        int a1 = lt.leerEntero("favor ingresar el numero a1","Favor intentar de nuevo");
-//        int a2 = lt.leerEntero("Favor ingresar el numero a2","Favor intentar de nuevo");
-//        int a3 = lt.leerEntero("favor ingresar el numero a3","Favor intentar de nuevo");
-//        int a4 = lt.leerEntero("favor ingresar el numero a4", "Favor intentar de nuevo");
-//
-//        int b1 = lt.leerEntero("favor ingresar el numero b1","Favor intentar de nuevo");
-//        int b2 = lt.leerEntero("Favor ingresar el numero b2","Favor intentar de nuevo");
-//        int b3 = lt.leerEntero("favor ingresar el numero b3","Favor intentar de nuevo");
-//        int b4 = lt.leerEntero("favor ingresar el numero b4", "Favor intentar de nuevo");
-//
-//        int c1 = a1 + b1;
-//        int c2 = a2 + b2;
-//        int c3 = a3 + b3;
-//        int c4 = a4 + b4;
-//
-//        System.out.println("|"+c1+" "+c3+"|");
-//        System.out.println("|"+c2+" "+c4+"|");
-//    }
-//
-//    public void resta(){
-//        int a1 = lt.leerEntero("favor ingresar el numero a1","Favor intentar de nuevo");
-//        int a2 = lt.leerEntero("Favor ingresar el numero a2","Favor intentar de nuevo");
-//        int a3 = lt.leerEntero("favor ingresar el numero a3","Favor intentar de nuevo");
-//        int a4 = lt.leerEntero("favor ingresar el numero a4", "Favor intentar de nuevo");
-//
-//        int b1 = lt.leerEntero("favor ingresar el numero b1","Favor intentar de nuevo");
-//        int b2 = lt.leerEntero("Favor ingresar el numero b2","Favor intentar de nuevo");
-//        int b3 = lt.leerEntero("favor ingresar el numero b3","Favor intentar de nuevo");
-//        int b4 = lt.leerEntero("favor ingresar el numero b4", "Favor intentar de nuevo");
-//
-//        int c1 = a1 - b1;
-//        int c2 = a2 - b2;
-//        int c3 = a3 - b3;
-//        int c4 = a4 - b4;
-//
-//        System.out.println("|"+c1+" "+c3+"|");
-//        System.out.println("|"+c2+" "+c4+"|");
-//    }
-//    public void multiplicacion(){
-//        int a1 = lt.leerEntero("favor ingresar el numero a1","Favor intentar de nuevo");
-//        int a2 = lt.leerEntero("Favor ingresar el numero a2","Favor intentar de nuevo");
-//        int a3 = lt.leerEntero("favor ingresar el numero a3","Favor intentar de nuevo");
-//        int a4 = lt.leerEntero("favor ingresar el numero a4", "Favor intentar de nuevo");
-//
-//        int b1 = lt.leerEntero("favor ingresar el numero b1","Favor intentar de nuevo");
-//        int b2 = lt.leerEntero("Favor ingresar el numero b2","Favor intentar de nuevo");
-//        int b3 = lt.leerEntero("favor ingresar el numero b3","Favor intentar de nuevo");
-//        int b4 = lt.leerEntero("favor ingresar el numero b4", "Favor intentar de nuevo");
-//
-//        int c1 = (a1*b1+a2*b3);
-//        int c2 = (a3*b1+a4*b3);
-//        int c3 = (a1*b2+a2*b4);
-//        int c4 = (a3*b2+a4*b4);
-//
-//        System.out.println("|"+c1+" "+c3+"|");
-//        System.out.println("|"+c2+" "+c4+"|");
-//    }
-//    public void escalar(){
-//        int a1 = lt.leerEntero("favor ingresar el numero a1","Favor intentar de nuevo");
-//        int a2 = lt.leerEntero("Favor ingresar el numero a2","Favor intentar de nuevo");
-//        int a3 = lt.leerEntero("favor ingresar el numero a3","Favor intentar de nuevo");
-//        int a4 = lt.leerEntero("favor ingresar el numero a4", "Favor intentar de nuevo");
-//
-//        int Escalar = lt.leerEntero("Favor ingrese el escalar","Favor intente de nuevo");
-//
-//        int b1 = Escalar*a1;
-//        int b2 = Escalar*a2;
-//        int b3 = Escalar*a3;
-//        int b4 = Escalar*a4;
-//
-//        System.out.println("|"+b1+" "+b3+"|");
-//        System.out.println("|"+b2+" "+b4+"|");
-//    }
-//    public void MatrizRotacion(){
-//        int x = lt.leerEntero("ingrese el valor x del vector","intente de nuevo");
-//        int y = lt.leerEntero("ingrese el valor y del vector","intente de nuevo");
-//
-//        double grados = lt.leerFlotante("Ingrese el angulo","intente de nuevo");
-//
-//        double a1 = Math.cos(grados);
-//        double a2 = Math.sin(grados);
-//        double a3 = Math.sin(grados);
-//        double a4 = Math.cos(grados);
-//
-//        System.out.println("la matriz rotacion es:");
-//        System.out.println("|"+a1+" "+a2+"|");
-//        System.out.println("|"+a3+" "+a4+"|");
-//
-//        System.out.println("La matriz del vector es: ");
-//        System.out.println("|"+x+" "+y+"|");
-//
-//        double b1 = a1 * x + (-a2 * y);
-//        double b2 = a3 * x + a4 * y;
-//
-//        System.out.println("El total es: ");
-//        System.out.println("|"+b1+" "+b2+"|");
-//    }
-//
-//    public int getA() {
-//        return a;
-//    }
-//
-//    public void setA(int a) {
-//        this.a = a;
-//    }
-//
-//    public int getB() {
-//        return b;
-//    }
-//
-//    public void setB(int b) {
-//        this.b = b;
-//    }
-//
-//    public int getC() {
-//        return c;
-//    }
-//
-//    public void setC(int c) {
-//        this.c = c;
-//    }
-//}
+public class IGMatR2 {
+    private IGVecR2 colX;
+    private IGVecR2 colY;
+
+
+    public IGMatR2() {
+        colX = new IGVecR2(1, 0);
+        colY = new IGVecR2(0, 1);
+    }
+
+    public IGMatR2(IGVecR2 colX, IGVecR2 colY) {
+        this.colX = new IGVecR2(colX);
+        this.colY = new IGVecR2(colY);
+
+    }
+
+    public IGMatR2(IGMatR2 b) {
+        this.colX = new IGVecR2(b.colX);
+        this.colY = new IGVecR2(b.colY);
+    }
+
+
+  public IGMatR2 mul(IGMatR2 b){
+IGMatR2 Resul = new IGMatR2();
+Resul.setColX(new IGVecR2(this.getFilaX().productoPunto(b.colX),this.getFilaY().productoPunto(b.colX)));
+Resul.setColY(new IGVecR2(this.getFilaX().productoPunto(b.colX),this.getFilaY().productoPunto(b.colY)));
+return Resul;
+    }
+
+  public IGVecR2 colXMat(IGVecR2 fila){
+       IGVecR2 Resul = new IGVecR2();
+       Resul.setx(fila.productoPunto(this.getFilaX()));
+       Resul.setY(fila.productoPunto(this.getFilaY()));
+       return Resul;
+
+}
+    public IGMatR2 suma (IGMatR2 b) {
+        IGMatR2 Resul = new IGMatR2();
+        Resul.setColX(this.colX.suma(b.colX));
+        Resul.setColY(this.colY.suma(b.colY));
+        return Resul;
+    }
+
+
+
+   public IGMatR2 resta (IGMatR2 b){
+       IGMatR2 Resul = new IGMatR2();
+       Resul.setColX(this.colX.resta(b.colX));
+       Resul.setColY(this.colY.resta(b.colY));
+       return Resul;
+    }
+ public IGMatR2 escalarXmat(double escalar){
+    IGMatR2 Resul = new IGMatR2();
+    Resul.colX.setx(this.colX.getX()* escalar);
+     Resul.colX.setY(this.colX.getY()* escalar);
+     Resul.colY.setx(this.colY.getX()* escalar);
+     Resul.colY.setY(this.colY.getY()* escalar);
+     return Resul;
+    }
+        public IGVecR2 rotacion (double angulo, IGVecR2 fila){
+            IGVecR2 Resul = new IGVecR2();
+            Resul.setx(fila.productoPunto(this.getFilaX()));
+            Resul.setY(fila.productoPunto(this.getFilaY()));
+            return  Resul;
+    }
+
+    public IGVecR2 getColX(){
+        return colX;
+    }
+
+    public void setColX(IGVecR2 colX) {
+        this.colX = colX;
+    }
+
+    public IGVecR2 getColY() {
+        return colY;
+    }
+
+    public void setColY(IGVecR2 colY) {
+        this.colY = colY;
+    }
+    public IGVecR2 getFilaX(){
+        return new IGVecR2(colX.getX(),colY.getY());
+    }
+    public IGVecR2 getFilaY(){
+        return new IGVecR2(colX.getY(),colY.getY());
+    }
+}

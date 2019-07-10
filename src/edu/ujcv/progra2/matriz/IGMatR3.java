@@ -1,8 +1,43 @@
-//package edu.ujcv.progra2.matriz;
-//import edu.ujcv.progra2.vector.IGVecR3;
-//
-//public class IGMatR3 {
-//
+package edu.ujcv.progra2.matriz;
+import edu.ujcv.progra2.vector.IGVecR3;
+
+public class IGMatR3 {
+
+
+    private IGVecR3 colX;
+    private IGVecR3 colY;
+    private IGVecR3 colZ;
+
+    public IGMatR3() {
+        colX = new IGVecR3(1, 0,0);
+        colY = new IGVecR3(0, 1,0);
+        colY = new IGVecR3(0, 1,0);
+    }
+
+    public IGMatR3(IGVecR3 colX, IGVecR3 colY, IGVecR3 colZ) {
+        this.colX = new IGVecR3(colX);
+        this.colY = new IGVecR3(colY);
+        this.colZ = new IGVecR3(colZ);
+    }
+
+    public IGMatR3(IGMatR3 b) {
+        this.colX = new IGVecR3(b.colX);
+        this.colY = new IGVecR3(b.colY);
+        this.colZ = new IGVecR3(b.colZ);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
 //    public IGMatR2 mul(IGMatR3 b){
 ////
 //    }
@@ -11,6 +46,9 @@
 ////
 //    }
 //    public IGMatR3 suma (IGMatR3 b){
+////
+//    }
+//    public IGMatR2 resta (IGMatR2 b){
 ////
 //    }
 //    public IGMatR3 escalarXmat(double escalar){
@@ -24,17 +62,4 @@
 //    }
 //    public static IGVecR3 rotacionY (double angulo, IGVecR3 vector){
 //    }
-//}
-// IGVecR2 a = new IGVecR2();
-//         System.out.println("ingrese los componentes del primer vector");
-//         a.setx(sc.nextDouble());
-//         a.setY(sc.nextDouble());
-//         IGVecR2 alpha = new IGVecR2();
-//         System.out.println("ingrese las componentes del segundo vector");
-//         alpha.setx(sc.nextDouble());
-//         alpha.setY(sc.nextDouble());
-//         double x = a.escalarPorVector( double alpha);
-//         double y = a.escalarPorVector( double alpha);
-//         System.out.println("Su resultado es");
-//         System.out.print(x);
-//         System.out.print("," + y);
+}

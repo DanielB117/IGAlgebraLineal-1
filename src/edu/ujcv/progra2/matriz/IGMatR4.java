@@ -12,6 +12,9 @@
 //    public IGMatR4 suma (IGMatR4 b){
 ////
 //    }
+//    public IGMatR2 resta (IGMatR2 b){
+////
+//    }
 //    public IGMatR4 escalarXmat(double escalar){
 ////
 //    }
@@ -20,6 +23,9 @@
 //     public static IGVecR4 rotacionX (double angulo, IGVecR4 vector){
 //  }
 //     public static IGVecR4 rotacionY (double angulo, IGVecR4 vector){
+//
+//    }
+//     public static IGVecR4 rotacionw (double angulo, IGVecR4 vector){
 //
 //    }
 //}
