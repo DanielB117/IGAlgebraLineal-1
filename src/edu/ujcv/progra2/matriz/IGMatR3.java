@@ -74,13 +74,15 @@ Resul.colX.setx(this.colX.getX()* escalar);
       return Resul;
     }
 
-// public static IGVecR3 rotacionZ (double angulo, IGVecR3 vector){
-//IGVecR3 Resul=new IGVecR3();
+ //public static IGVecR3 rotacionZ (double angulo, IGVecR3 vector){
+   //  )
+    // public static IGVecR3 rotacionX (double angulo, IGVecR3 vector){
+   // }
+    //public static IGVecR3 rotacionY (double angulo, IGVecR3 vector){
+   // }
 
-//     public static IGVecR3 rotacionX (double angulo, IGVecR3 vector){
-//    }
-//    public static IGVecR3 rotacionY (double angulo, IGVecR3 vector){
-//    }
+
+
 public IGVecR3 getColX(){
     return colX;
 }
